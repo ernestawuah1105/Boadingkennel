@@ -2,7 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Navbar, Nav, Button } from 'react-bootstrap';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 import Home from './component/Home';
 
@@ -16,7 +16,11 @@ function App() {
             <Navbar.Brand href="/">Boarding Kennel</Navbar.Brand>
           </Navbar>
            <div className="componenet">
-            <Route path="/" exact component={Home}/>
+             <Routes>
+             
+            <Route path="/"  element={<Home />}/>
+            </Routes>
+            
           </div>
         
         </div>
